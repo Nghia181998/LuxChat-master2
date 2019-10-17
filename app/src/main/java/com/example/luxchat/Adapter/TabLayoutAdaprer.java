@@ -1,14 +1,13 @@
 package com.example.luxchat.Adapter;
 
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.luxchat.Fragment.FragmentAboutMe;
 import com.example.luxchat.Fragment.FragmentGroup;
 import com.example.luxchat.Fragment.FragmentOne;
-import com.example.luxchat.UI.HomeActivity;
 
 public class TabLayoutAdaprer extends FragmentStatePagerAdapter {
     private String listTittle[] = {"Messenger","Group Chat","About you"};
