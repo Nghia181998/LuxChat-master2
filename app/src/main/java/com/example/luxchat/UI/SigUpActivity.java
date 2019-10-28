@@ -38,18 +38,26 @@ public class SigUpActivity extends AppCompatActivity {
                 String pwd = edtpassword.getText().toString();
                 String rep = edtrepass.getText().toString();
                 String name = edtusername.getText().toString();
-
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 if(email.isEmpty()){
                     edtemail.setError("Please enter email id");
+                    edtemail.requestFocus();
+                }
+                else  if(!email.matches(emailPattern)){
+                    edtemail.setError("It is not pattern Email");
                     edtemail.requestFocus();
                 }
                 else  if(pwd.isEmpty()){
                     edtpassword.setError("Please enter your password");
                     edtpassword.requestFocus();
                 }
+                else  if(!rep.matches(pwd)){
+                    edtrepass.setError("Please enter your password right");
+                    edtrepass.requestFocus();
+                }
                 else  if(rep.isEmpty()){
-                    edtpassword.setError("Please enter your password");
-                    edtpassword.requestFocus();
+                    edtrepass.setError("Please enter your password");
+                    edtrepass.requestFocus();
                 }
                 else  if(name.isEmpty()){
                     edtusername.setError("Please enter your name");

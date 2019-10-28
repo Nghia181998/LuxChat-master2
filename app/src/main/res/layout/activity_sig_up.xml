@@ -60,7 +60,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:hint="Số Điện Thoại Hoặc Email"
+        android:hint="Email đăng kí"
         app:layout_constraintBottom_toTopOf="@+id/edtNguoidung"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

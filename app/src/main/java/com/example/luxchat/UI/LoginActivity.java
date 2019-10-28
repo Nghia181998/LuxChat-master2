@@ -48,10 +48,16 @@ public class LoginActivity extends AppCompatActivity {
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = edtuser.getText().toString();
+                String email = edtuser.getText().toString().trim();
                 String pwd = edtpass.getText().toString();
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 if(email.isEmpty()){
                     edtuser.setError("Please enter email id");
+                    edtuser.requestFocus();
+                }
+                else if(!email.matches(emailPattern)){
+                    edtuser.setError("It is not pattern Email");
                     edtuser.requestFocus();
                 }
                 else  if(pwd.isEmpty()){
