@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".UI.ResetPassActivity">
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/edtEmailReset"
+        android:layout_width="350dp"
+        android:hint="Email"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Reset"
+        android:onClick="resetPass"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonshape"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

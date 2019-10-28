@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.luxchat.MainActivity;
 import com.example.luxchat.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btnsignin;
     EditText edtuser,edtpass;
     ActionBar actionBar;
+    TextView tvforgot;
     FirebaseAuth mFirebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,14 @@ public class LoginActivity extends AppCompatActivity {
         edtpass = findViewById(R.id.passwordlogin);
         actionBar = getSupportActionBar();
         mFirebaseAuth = FirebaseAuth.getInstance();
+        tvforgot = findViewById(R.id.tvfg);
+        tvforgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,ResetPassActivity.class);
+                startActivity(intent);
+            }
+        });
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#becff1")));
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override

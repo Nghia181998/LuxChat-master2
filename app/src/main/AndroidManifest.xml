@@ -16,6 +16,7 @@
         <activity android:name=".UI.LoginActivity"/>
         <activity android:name=".UI.SigUpActivity" />
         <activity android:name=".UI.HomeActivity" />
+        <activity android:name=".UI.ResetPassActivity"/>
         <activity android:name=".UI.Splash_Activity">
 
             <intent-filter>

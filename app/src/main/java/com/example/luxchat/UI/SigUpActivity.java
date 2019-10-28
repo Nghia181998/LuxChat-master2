@@ -52,8 +52,8 @@ public class SigUpActivity extends AppCompatActivity {
                     edtpassword.requestFocus();
                 }
                 else  if(name.isEmpty()){
-                    edtpassword.setError("Please enter your name");
-                    edtpassword.requestFocus();
+                    edtusername.setError("Please enter your name");
+                    edtusername.requestFocus();
                 }
                 else  if(email.isEmpty() && pwd.isEmpty()){
                     Toast.makeText(SigUpActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
